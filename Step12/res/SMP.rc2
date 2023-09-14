@@ -1,0 +1,66 @@
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE
+BEGIN
+IDR_LIB								"Панель СМП"
+IDS_API7							"kAPI7.dll"
+IDS_API7LT							"klAPI7.dll"
+END
+
+// Определение имени панелей
+STRINGTABLE
+{
+	2000 "Библиотечная панель свойств"
+	2001 "Инструментальная панель 1"
+}
+
+// Определение состава
+2000 RCDATA
+{
+	2001 // Инструментальная панель, входящая в компактную
+	0xffff //END_OF_RESOURCE_TABLE
+}
+
+// Определение состава панели
+2001 RCDATA
+{
+	1 // Показать панель
+	2 // Скрыть панель
+	0xffff //END_OF_RESOURCE_TABLE
+}
+
+1001 BITMAP "res\\1001.bmp"
+1002 BITMAP "res\\1002.bmp"
+
+// Определение иконок инструментальной панели при включении её в компактную панель:
+2001 ICON DISCARDABLE "res\\bar1.ico"
+
+
+BPM_BY_OUTER_RADUIS		BITMAP	DISCARDABLE		"res\\by_outer_raduis.bmp"
+BPM_BY_INNER_RADUIS		BITMAP	DISCARDABLE		"res\\by_inner_radius.bmp"
+BPM_BY_SIDE				BITMAP	DISCARDABLE		"res\\by_size.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+IDR_LIB MENU
+BEGIN
+MENUITEM "Панель свойств СМП по профилю" 1
+MENUITEM "Панель свойств СМП по режимам резания" 2
+
+/*
+	POPUP "Панель свойств СМП"
+	BEGIN
+		MENUITEM "Создать закладку и подписаться", 1
+		MENUITEM "Отписаться", 3
+	END
+*/
+END

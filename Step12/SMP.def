@@ -1,0 +1,9 @@
+;LIBRARY		"SMP"
+;DESCRIPTION	'Windows Dynamic Link Library'
+
+EXPORTS
+ LIBRARYENTRY	@1
+ LIBRARYID		@2
+ LibInterfaceNotifyEntry	@3
+ LibIsOnApplication7		@4
+ LibToolBarId	@5
